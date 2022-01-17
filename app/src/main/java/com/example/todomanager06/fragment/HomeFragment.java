@@ -35,7 +35,7 @@ public class HomeFragment extends Fragment {
         initAdapter();
     }
 
-    private String getData()  {
+    private String getData() {
         if (getArguments() != null) {
             text = getArguments().getString("key");
             return text;
@@ -46,7 +46,7 @@ public class HomeFragment extends Fragment {
     private void initAdapter() {
         HomeAdapter homeAdapter = new HomeAdapter();
         binding.homeRecycler.setAdapter(homeAdapter);
-        if (!getData().isEmpty()){
+        if (!getData().isEmpty()) {
             homeAdapter.addText(text);
         }
     }
